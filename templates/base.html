@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evergrow</title>
+    <style>
+        body {
+            font-family: graphie, sans-serif;
+            color: #000;
+            letter-spacing: -0.03em;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+
+        .alert {
+            padding: 20px;
+            margin: 5px;
+            color: #970020;
+            background-color: #ffd5de;
+        }
+
+        div.header {
+            background-image: url(static/hero-bg-min.png);
+            background-size: cover;
+            height: 200px;
+            color: #fff;
+            line-height: 200px;
+            padding: 40px;
+        }
+
+        h1 {
+            font-family: capitolium-2, sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            font-size: 60px;
+        }
+
+        .blurb {
+            margin: 40px;
+        }
+
+        .highlight {
+            color: #185e67;
+            font-weight: bold;
+        }
+
+        button {
+            border: 1.25px solid #000;
+            border-radius: 35px;
+            background: #fff;
+            padding: 10px 26px;
+            font-size: 18px;
+            line-height: 1em;
+            text-align: center;
+            letter-spacing: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Evergrow</h1>
+    </div>
+    <div class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

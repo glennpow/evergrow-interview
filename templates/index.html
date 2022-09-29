@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="blurb">
+        <span class="highlight">The Inflation Reduction Act of 2022 is a game changer for American climate policy.</span>
+        New funding available for solar, wind, batteries, carbon capture, sustainable aviation fuel, hydrogen, nuclear, and green manufacturing will spur massive new development of decarbonization infrastructure.
+    </div>
+
+    <form method="post">
+        <label for="content">Numerical Data (please enter one number per line)</label>
+        <br>
+        <textarea name="content" placeholder="Numbers..." rows="15" cols="60">{{ request.form['content'] }}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
