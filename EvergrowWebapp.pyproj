@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a27c6bc4-2ef9-4d53-9e56-cb82ec7f4932</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>EvergrowWebapp.py</StartupFile>
+    <StartupFile>evergrow\app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EvergrowWebapp.py" />
+    <Compile Include="evergrow\app.py" />
+    <Compile Include="Procfile" />
+    <Compile Include="setup.py" />
+    <Compile Include="evergrow\templates\index.html" />
+    <Compile Include="tests\test_pdf.py" />
+    <Compile Include="wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="evergrow\" />
+    <Folder Include="tests\" />
+    <Folder Include="evergrow\static\" />
+    <Folder Include="evergrow\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="requirements.txt" />
+    <Content Include="runtime.txt" />
+    <Content Include="evergrow\static\hero-bg-min.png" />
+    <Content Include="evergrow\templates\base.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
